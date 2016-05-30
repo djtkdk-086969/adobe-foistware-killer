@@ -5,6 +5,8 @@ User script for Greasemonkey / Tampermonkey which automatically unchecks the "Op
 
 ## Summary
 
+[日本語版のREADME.mdはこちら](README.ja.md)
+
 Adobe Foistware Killer is a user script for Greasemonkey / Tampermonkey which automatically unchecks the "Optional Offer" checkboxes on download pages of Adobe products.
 
 The download pages of Adobe products (such as Flash Player or Acrobat Reader DC) pushes unrelated additional softwares you might not want to install (such as McAfee Security Scan Plus).
