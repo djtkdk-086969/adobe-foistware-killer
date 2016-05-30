@@ -1,0 +1,3 @@
+このディレクトリ内のファイルは、GitHubリポジトリに移管する以前に作成された古いバージョンです。
+
+Files in this directory are old versions which was made before transferring to GitHub repository.
