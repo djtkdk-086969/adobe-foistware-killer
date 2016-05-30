@@ -5,7 +5,7 @@
 // @description:ja Adobe製品ダウンロードページの「オプションのプログラム」のチェックを自動的に外します。
 // @description    Automatically unchecks the "Optional Offer" checkbox on download pages of Adobe products.
 // @include        *://get*.adobe.com/*
-// @version        0.22
+// @version        0.25
 // @grant          none
 // @license        https://opensource.org/licenses/mit-license.php
 // ==/UserScript==
@@ -28,21 +28,30 @@
 
     function check_elem() {
         console.log("AFK: Checking elements...");
-        if(document.getElementById("offerCheckbox") !== null) {
+        var offer = document.getElementById("offersInformationPane");
+        if(offer === null) return;
+        var cb = offer.getElementsByTagName("input");
+        if(cb.length > 0) {
             mo.disconnect();
-            var event = new Event('change');
-            console.log("AFK: Foistware offer detected! Unchecking the #offerCheckbox.");
-            document.getElementById("offerCheckbox").checked=false;
-            document.getElementById("offerCheckbox").dispatchEvent(event);
-            var info = document.createElement("p");
-            if(navigator.language.substr(0,2) === "ja") {
-                info.innerHTML = "Adobe Foistware Killer によりオプションのプログラムが拒否されました。";
-            } else {
-                info.innerHTML = "Adobe Foistware Killer declined the optional offer.";
+            Array.prototype.slice.call(cb).forEach(function (node) {
+                if(node.checked) {
+                    console.log("AFK: Foistware offer detected! Unchecking the #offerCheckbox.");
+                    var event = new Event('change');
+                    node.checked = false;
+                    node.dispatchEvent(event);
+                }
+            });
+            if(offer.querySelectorAll("p.afk_info").length === 0) {
+                var info = document.createElement("p");
+                info.className = "afk_info";
+                if(navigator.language.substr(0,2) === "ja") {
+                    info.innerHTML = "Adobe Foistware Killer によりオプションのプログラムが拒否されました。";
+                } else {
+                    info.innerHTML = "Adobe Foistware Killer declined the optional offer.";
+                }
+                offer.appendChild(info);
             }
-            document.getElementById("offersInformationPane").appendChild(info);
         }
     }
-
 })();
 
