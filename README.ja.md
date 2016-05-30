@@ -13,9 +13,9 @@ Flash Player や Acrobat Reader DC などのAdobe製品のダウンロードペ�
 
 本スクリプトは、Adobe製品のダウンロードページにおいて「オプションのプログラム」を検出すると、チェックボックスを自動的に解除します。
 
-![Adobe製品ダウンロード時に現れる「オプションのプログラム」](img/afk_1.ja.png)
+[![Adobe製品ダウンロード時に現れる「オプションのプログラム」](img/afk_1.ja.thumb.png)](img/afk_1.ja.png)
 
-![「オプションのプログラム」のチェックが自動的に外される](img/afk_2.ja.png)
+[![「オプションのプログラム」のチェックが自動的に外される](img/afk_2.ja.thumb.png)](img/afk_2.ja.png)
 
 ## ライセンス
 [MIT License](http://opensource.org/licenses/MIT)

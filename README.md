@@ -13,9 +13,9 @@ Although you can decline the offers by unchecking the checkboxes, they are check
 
 This script detects Optional Offers on download pages of Adobe products and automatically unchecks all the checkboxes.
 
-![Optional Offers appearing on download pages of Adobe products](img/afk_1.ja.png)
+[![Optional Offers appearing on download pages of Adobe products](img/afk_1.ja.thumb.png)](img/afk_1.ja.png)
 
-![Optional Offers declined by this script](img/afk_2.ja.png)
+[![Optional Offers declined by this script](img/afk_2.ja.thumb.png)](img/afk_2.ja.png)
 
 ## License
 [MIT License](http://opensource.org/licenses/MIT)
